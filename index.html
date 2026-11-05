@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu ❤️</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,500;1,600&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'DM Sans', sans-serif;
+            background: #650d25;
+            color: #5b1425;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 55px;
+            color: #ffe0e8;
+            font-style: italic;
+        }
+
+        .subtitle {
+            color: #ffd0dc;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #fff0f2, #ffe0e7);
+            border-radius: 25px;
+            padding: 35px 25px;
+            box-shadow: 0 20px 50px #30000d66;
+        }
+
+        .letter {
+            font-size: 35px;
+        }
+
+        p {
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        strong {
+            color: #9b1738;
+        }
+
+        .question {
+            background: #ffd3df;
+            border: 2px dashed #df7894;
+            border-radius: 20px;
+            padding: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-style: italic;
+            margin-top: 30px;
+        }
+
+        button {
+            border: none;
+            border-radius: 30px;
+            padding: 14px 22px;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 8px;
+            transition: 0.3s;
+        }
+
+        .yes {
+            background: #a51b43;
+            color: white;
+        }
+
+        .yes:hover {
+            transform: scale(1.05);
+        }
+
+        .maybe {
+            background: white;
+            color: #9b1c40;
+        }
+
+        #response {
+            display: none;
+            margin-top: 25px;
+            color: #a51b43;
+            font-size: 20px;
+        }
+
+        .footer {
+            color: #ffd5df;
+            margin-top: 25px;
+            font-size: 13px;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            color: pink;
+            animation: float 10s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            to {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+
+        @media(max-width: 500px) {
+            h1 {
+                font-size: 42px;
+            }
+
+            .question {
+                font-size: 23px;
+            }
+
+            .card {
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Untuk Kamu ♡</h1>
+
+        <div class="subtitle">
+            Sedikit kata, untuk seseorang yang sangat berarti...
+        </div>
+
+        <div class="card">
+
+            <div class="letter">💌</div>
+
+            <p>
+                Jujur saja, aku sudah lama ingin menyampaikan
+                ini ke kamu...
+            </p>
+
+            <p>
+                Sejak pertama kali kita berkenalan, kamu selalu
+                berhasil membuat hari-hariku terasa
+                <strong>lebih baik</strong>.
+                Entah itu dari senyummu, tawamu, atau hal-hal
+                kecil yang kamu lakukan.
+                <strong>Semuanya berarti banget buat aku.</strong>
+            </p>
+
+            <p>
+                Di sela-sela kesibukanku, kamu sering hadir
+                di pikiranku.
+                Aku suka bagaimana kamu berpikir, cara kamu
+                melihat dunia, dan semangatmu dalam mengejar
+                apa yang kamu impikan.
+            </p>
+
+            <p>
+                Dan yang paling penting...
+                <strong>aku benar-benar menyukaimu.</strong>
+                Bukan hanya karena apa yang kamu lakukan,
+                tapi juga karena siapa kamu sebenarnya.
+            </p>
+
+            <p>
+                Aku merasa beruntung bisa mengenalmu.
+                Aku berharap kita bisa terus bersama,
+                mengenal satu sama lain lebih dekat,
+                dan berbagi cerita.
+            </p>
+
+            <p>
+                Jadi, dengan segala kerendahan hati,
+                aku ingin bertanya...
+            </p>
+
+            <div class="question">
+                Apakah kamu mau menjadi bagian
+                dari cerita indahku? ♡
+            </div>
+
+            <button class="yes" onclick="jawabanIya()">
+                Iya, aku mau 💗
+            </button>
+
+            <button class="maybe" onclick="jawabanNanti()">
+                Aku mau pikir-pikir dulu 🌷
+            </button>
+
+            <div id="response"></div>
+
+            <p>
+                Terima kasih sudah membaca sampai akhir... ♡
+            </p>
+
+        </div>
+
+        <div class="footer">
+            Dibuat dengan sepenuh hati ❤️
+        </div>
+
+    </div>
+
+    <script>
+
+        // NOMOR WHATSAPP KAMU
+        const nomorWA = "6285379524962";
+
+        function jawabanIya() {
+            const pesan =
+                "Aku mau kok ❤️ Makasih sudah berani confess!";
+
+            window.open(
+                "https://wa.me/" + nomorWA +
+                "?text=" + encodeURIComponent(pesan),
+                "_blank"
+            );
+        }
+
+        function jawabanNanti() {
+            const pesan =
+                "Aku mau pikir-pikir dulu ya 🌷";
+
+            window.open(
+                "https://wa.me/" + nomorWA +
+                "?text=" + encodeURIComponent(pesan),
+                "_blank"
+            );
+        }
+
+        // ANIMASI HATI
+        function buatHati() {
+            const hati = document.createElement("div");
+
+            hati.className = "heart";
+            hati.innerHTML = "♡";
+
+            hati.style.left = Math.random() * 100 + "vw";
+            hati.style.fontSize =
+                Math.random() * 25 + 15 + "px";
+
+            document.body.appendChild(hati);
+
+            setTimeout(() => {
+                hati.remove();
+            }, 10000);
+        }
+
+        setInterval(buatHati, 700);
+
+    </script>
+
+</body>
+</html>
