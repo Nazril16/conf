@@ -1,0 +1,2 @@
+# conf
+untuk seseorang ❤️
